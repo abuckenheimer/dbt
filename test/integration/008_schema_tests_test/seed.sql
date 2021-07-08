@@ -4,6 +4,8 @@ create table {schema}.seed (
 	first_name VARCHAR(11),
 	email VARCHAR(31),
 
+    -- column matching table name to test ambiguous references
+    seed BOOL DEFAULT False,
 	net_worth NUMERIC(12, 2) DEFAULT '100.00',
 	fav_number NUMERIC DEFAULT '3.14159265',
 

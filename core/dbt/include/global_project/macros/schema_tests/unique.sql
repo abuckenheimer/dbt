@@ -1,5 +1,10 @@
 {% macro default__test_unique(model, column_name) %}
 
+with dbt_test__target as (
+
+    select * from {{ model }}
+
+)
 select
     {{ column_name }},
     count(*) as n_records
